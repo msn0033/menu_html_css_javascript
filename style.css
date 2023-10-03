@@ -1,0 +1,82 @@
+*,*::after,a::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+:root{
+    --menu:#ca3e47;
+    --fontwhite:white;
+    --hoverbtn:#ffb549;
+    --bg-menu:hsla(0, 0%, 3%, 0.7);
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+}
+.Container{
+  
+}
+.overlay{
+    width:0;
+    height: 100%;
+    background-color:var(--bg-menu);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition:  1s ease-in-out ;
+    overflow: hidden;
+  
+}
+.overlay-content{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+  
+    text-align: center;
+    position: relative;
+    top: 200px;
+
+}
+a,a:focus,a:active{
+    text-decoration: none;
+    color: var(--fontwhite);
+}
+
+
+#btnClose{
+    all:unset;
+    color: var(--fontwhite);
+    font-size: 1.75rem;
+    position: relative;
+    top: 10%;
+    left:80%;
+    cursor: pointer;
+}
+.overlay-content a:hover ,.btnClose:hover{
+    transition:color 0.2s;
+    color: var(--hoverbtn);
+  
+}
+
+
+.btn-menu {
+    cursor:pointer;
+   text-transform: capitalize;
+    padding: 1em 8em;
+    border: 0;
+    font-size: 1em;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:var(--menu);
+    color: var(--fontwhite);
+
+}
+.btn-menu:hover{
+    background-color: var(--hoverbtn);
+    transition:background .2s;
+
+}
